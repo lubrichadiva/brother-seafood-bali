@@ -1,0 +1,99 @@
+{
+  "app_name": "Brother Seafood Bali - Travel Agent Proposal Generator & Tracker",
+  "archetype": "LUXURY & TROPICAL HOSPITALITY (Gold & Crimson Warmth)",
+  "theme": {
+    "default_mode": "light_with_dark_luxury_accents",
+    "background_dashboard": "#FAF8F5",
+    "background_proposal_print": "#FFFFFF",
+    "primary_accent": "#C9A227",
+    "secondary_accent": "#8B1A1A",
+    "dark_surface": "#1A1513",
+    "card_background": "#FFFFFF",
+    "border_color": "#E5DECF"
+  },
+  "typography": {
+    "headings": {
+      "family": "Playfair Display, Georgia, serif",
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-serif font-bold tracking-tight text-[#1A1513]",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-serif font-bold text-[#8B1A1A]",
+      "h3": "text-xl sm:text-2xl font-serif font-semibold text-[#C9A227]",
+      "h4": "text-lg sm:text-xl font-serif font-medium"
+    },
+    "body": {
+      "family": "Lato, Open Sans, sans-serif",
+      "main": "text-base font-normal leading-relaxed text-[#2C2623]",
+      "muted": "text-sm text-[#6E655F]",
+      "small_label": "text-xs font-semibold uppercase tracking-wider text-[#C9A227]"
+    },
+    "trilingual_display_guidelines": "Present English (EN), Chinese (中文), and Bahasa Indonesia (ID) clearly. In proposal document views, display stacked trilingual headers or synchronized side-by-side / accordion toggles. Ensure typography for Chinese characters uses fallback 'PingFang SC, Microsoft YaHei, sans-serif' for pristine rendering."
+  },
+  "colors": {
+    "gold_primary": "#C9A227",
+    "gold_hover": "#B08C1E",
+    "gold_light_bg": "#FDFBF5",
+    "maroon_primary": "#8B1A1A",
+    "maroon_dark": "#631010",
+    "maroon_light_bg": "#FDF2F2",
+    "neutral_dark": "#1A1513",
+    "neutral_card": "#FFFFFF",
+    "neutral_bg": "#FAF8F5",
+    "neutral_border": "#E5DECF",
+    "success_green": "#16A34A",
+    "info_blue": "#2563EB",
+    "warning_amber": "#D97706"
+  },
+  "visual_enhancers": {
+    "gold_foil_border": "border border-[#C9A227]/40 shadow-[0_4px_20px_rgba(201,162,39,0.12)]",
+    "glassmorphism_header": "backdrop-blur-md bg-white/90 border-b border-[#E5DECF]",
+    "print_styles": "A4 page dimensions (@page { size: A4; margin: 15mm; }), white background, zero app chrome (hide navbar, sidebar, buttons, and floating widgets on window.print())."
+  },
+  "grids_and_layouts": {
+    "dashboard_grid": "grid grid-cols-1 md:grid-cols-4 lg:grid-cols-12 gap-6 p-6 md:p-8",
+    "proposal_document_layout": "max-w-4xl mx-auto bg-white p-8 md:p-12 shadow-2xl rounded-xl border border-[#C9A227]/30 my-8 print:my-0 print:p-0 print:shadow-none print:border-none",
+    "photo_gallery_grid": "grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"
+  },
+  "motion_and_animations": {
+    "hover_lift": "transition-all duration-300 hover:-translate-y-1 hover:shadow-lg",
+    "fade_in_entrance": "transition-opacity duration-300 ease-in-out"
+  },
+  "accessibility": {
+    "contrast_ratio": "Ensure text contrast meets WCAG AA (minimum 4.5:1). Gold headers on dark maroon background use explicit high contrast #FFFFFF or #FAF8F5 text.",
+    "interactive_states": "Hover, focus, and active states explicitly defined with distinct backgrounds and focus rings (focus:ring-2 focus:ring-[#C9A227])."
+  },
+  "component_strategy": {
+    "shadcn_primitives_used": [
+      "Dialog / Modal for Adding TA Visit & Editing Packages",
+      "Tabs for Trilingual Toggle / Proposal Sections",
+      "Table for Contract Rates, Commission Structure, & TA Tracker",
+      "Select & DropdownMenu for Package Selection & TA Filter",
+      "Sonner for Toast Notifications on Create / Edit / Save / Export",
+      "Input / Textarea / Checkbox for Proposal Customization Form"
+    ],
+    "print_export_handling": {
+      "pdf": "Trigger window.print() with custom @media print CSS targeting #printable-proposal div",
+      "docx": "Generates real downloadable .docx blob containing proposal tables, branding, terms, and contract rates using docx / file-saver library in frontend."
+    }
+  },
+  "image_urls": {
+    "logo_fallback": "https://images.unsplash.com/photo-1542897643-cfccd88c7127?auto=format&fit=crop&w=300&q=80",
+    "balinese_welcome_dance": "https://images.unsplash.com/photo-1741272689174-f7f03b09a0ab?auto=format&fit=crop&w=800&q=80",
+    "balinese_culture": "https://images.unsplash.com/photo-1585704123905-b89826d5daa6?auto=format&fit=crop&w=800&q=80",
+    "beachfront_dining": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    "seafood_feast": "https://images.unsplash.com/photo-1534422298391-e4f8c172dddb?auto=format&fit=crop&w=800&q=80",
+    "sunset_atmosphere": "https://images.unsplash.com/photo-1519046904884-53103b34b206?auto=format&fit=crop&w=800&q=80"
+  },
+  "instructions_to_main_agent": [
+    "Ensure all user interactions feature micro-animations and proper loading states.",
+    "Implement the 3 main user requirements: (1) Proposal Generator with print (A4 PDF) & DOCX export, (2) Travel Agent Visit Tracker with per-TA totals, and (3) Settings for Logo & Photo Gallery.",
+    "Display all 3 languages (English, Chinese, Bahasa Indonesia) seamlessly in the proposal output document.",
+    "Add data-testid attributes to all interactive elements, input fields, tables, action buttons, and summaries.",
+    "Strictly follow gold (#C9A227) and maroon (#8B1A1A) branding colors with Playfair Display headings and Lato body."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Do NOT use transparent backgrounds on headers or dropdown containers.",
+    "Do NOT center align body text globally.",
+    "Maintain responsive layouts with mobile-first grid structures.",
+    "Always include robust fallback data for previewing proposal templates.",
+    "Always test export functions (PDF print view and DOCX download generation) with real data."
+  ]
+}
